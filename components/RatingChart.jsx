@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Chart } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -8,15 +8,16 @@ import {
   LineElement,
   Tooltip,
   Legend,
-  BarElement
-} from 'chart.js';
+  BarElement,
+  BarController,
+} from "chart.js";
 export default function RatingChart({ data }) {
   const chartData = {
-    labels: data.map((player) => player.username),
+    labels: data.map((player) => player?.username),
     datasets: [
       {
         label: "Rating",
-        data: data.map((player) => player.perfs.classical.rating),
+        data: data.map((player) => player?.perfs?.classical?.rating),
         backgroundColor: "blue",
         hoverBackgroundColor: "skyblue",
       },
@@ -29,9 +30,9 @@ export default function RatingChart({ data }) {
     LineElement,
     Tooltip,
     Legend,
-    BarElement
+    BarElement,
+    BarController
   );
-
 
   return (
     <Chart
@@ -44,16 +45,13 @@ export default function RatingChart({ data }) {
           easing: "easeInOut",
         },
         scales: {
-          yAxes: [
-            {
-              ticks: {
-                beginAtZero: true,
-              },
+          y: {
+            ticks: {
+              beginAtZero: true,
             },
-          ],
+          },
         },
       }}
-      
     />
   );
 }
