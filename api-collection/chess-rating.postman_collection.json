@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "c0bb6e71-9688-4043-b9b2-4fb77006feb0",
+		"name": "chess-rating",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18077324"
+	},
+	"item": [
+		{
+			"name": "player rating history",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://chess-rating-tpq9.vercel.app/api/player/Unkreativ3/rating-history",
+					"protocol": "https",
+					"host": [
+						"chess-rating-tpq9",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"player",
+						"Unkreativ3",
+						"rating-history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "leaderboard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://chess-rating-tpq9.vercel.app/api/top-players",
+					"protocol": "https",
+					"host": [
+						"chess-rating-tpq9",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"top-players"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
