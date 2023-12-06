@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 export const GET = async (req, res) => {
+  
   const url = "https://lichess.org/api/player/top/100/classical";
   try {
     const response = await fetch(url);

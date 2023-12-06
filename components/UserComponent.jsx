@@ -24,7 +24,7 @@ const UserProfile = ({ res }) => {
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <h1 className="text-2xl md:text-4xl font-bold mb-4 text-purple-500">
-          {user.user.name}'s Profile
+          {user?.user?.name}'s Profile
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           <motion.div
@@ -36,19 +36,19 @@ const UserProfile = ({ res }) => {
             </h2>
             <p>
               <FaChessKing className="inline mr-2" />
-              Rank: {user.rank}
+              Rank: {user?.rank}
             </p>
             <p>
               <FaTrophy className="inline mr-2" />
-              Percentile: {user.percentile}%
+              Percentile: {user?.percentile}%
             </p>
             <p>
               <FaChessKing className="inline mr-2" />
-              Highest Rating: {user.stat.highest.int}
+              Highest Rating: {user?.stat?.highest?.int}
             </p>
             <p>
               <FaChessPawn className="inline mr-2" />
-              Joined Lichess: {formatDate(user.stat.lowest.at)}
+              Joined Lichess: {formatDate(user?.stat?.lowest?.at)}
             </p>
           </motion.div>
           <motion.div
